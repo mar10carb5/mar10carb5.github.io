@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!--Project 2
+    The Fall of the Roman Republic
+    Author: Mario Carbajal
+    Date:   12/06/2024
+    Filename: The Fall of the Roman Republic.html
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fall of the Roman Republic</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    
+</head>
+
+<body>
+<div class="topnav">
+	<a class="active" href="index.html">Home</a>
+        <a href="SPQR.html">S.P.Q.R</a>
+        <a href="The First Triumvirate.html">The First Triumvirate</a>
+        <a href="characters.html">Julius Caesar</a>
+        <a href="final.html">Princeps</a>
+        <a href="Emperators.html">Emperators</a>
+        <a href="about.html">About</a>        
+        <a href="forums.html">Questioner</a>
+    </div>
+    
+        <h1>Questionnaire</h1>
+        <form action="/action_page.php" method="post" onsubmit="validateForm()">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                <br><br>
+                <label for="fname">First name:</label>
+                <input type="text" pattern="[A-Za-z]{1,20}" title="First name should only contain letters (up to 10)" required><br> 
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" ><br>
+                <br>
+		<label for="phone">Enter your phone number:</label><br>
+            <input id="phone" name="phone" placeholder="123-456-7890"><br>
+	    <br><br>
+                <label for="datetime">When did you fall in love with Roman History? Please enter Date:</label><br>
+                <input type="date" id="date" name="date"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Survey</legend>
+                <p>Do you like Roman History?</p>
+                <input type="radio" id="YES" name="history_preference" value="Yes" required>
+                <label for="YES">Yes</label><br>
+                <input type="radio" id="NO" name="history_preference" value="No" required>
+                <label for="NO">No, but one day I will</label><br><br>
+
+                
+
+                <h2>Which page was your favorite?</h2>
+                
+                <input type="checkbox" id="SPQR" >
+                <label for="S.P.Q.R">S.P.Q.R</label><br>
+		
+		<input type="checkbox" id="The_First_Triumvirate">
+                <label for="The_First_Triumvirate">The First Triumvirate</label><br>
+
+		<input type="checkbox" id="Julius Caesar" >
+                <label for="Characters">Julius Caesar</label><br>
+                
+                <input type="checkbox" id="Principes">
+                <label for="Principes">Principes</label><br>
+                
+                <input type="checkbox" id="Emperators">
+                <label for="Emperators">Emperators</label><br>
+
+                
+                <h2>Select your favorite Roman emperor:</h2>
+                <label for="favorite_emperor">Favorite Emperor:</label>
+                <input list="emperors">
+                <datalist id="emperors">
+                    <option value="Julius Caesar">
+                    <option value="Augustus">
+                    <option value="Marcus Aurelius">
+                    <option value="Diocletian">
+                    <option value="Constantine">
+                </datalist><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Opinion</legend>
+                <label for="opinion">Tell us in your own words what you think of this website!</label><br>
+                <textarea id="opinion" name="opinion" rows="4" cols="70" required></textarea><br><br>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            
+            <script>
+
+    function validateForm() {
+        var textarea = document.getElementById("opinion");
+        
+        var letters = textarea.value.trim().split(/\s+/);
+        if (letters.length < 5) {
+            alert("Please enter at least 5 letters in the 'Tell us what you think' section.");
+            return false;
+        }
+        return true;
+    
+</script>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MC designs</p>
+    </footer>
+</body>
+
+</html>

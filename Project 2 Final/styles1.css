@@ -1,0 +1,54 @@
+/*Project 2
+    
+    The Fall of the Roman Republic
+    Author: Mario Carbajal
+    Date:   10/27/2024
+
+    Filename: Syles1.css*/
+
+body {
+    color: white;
+    font-family: 'Courier New', monospace;
+    margin: 15px;
+    padding: 20px;
+    background-color: #8B0000;
+    font-size: 20px;
+    
+}
+
+header {
+    background: #d62828; 
+    color: #ffffff;
+    padding: 45px 0;
+    text-align: center;
+    font-size: 27px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px 0;
+    background: #8B0000;
+    color: #ffffff;
+    float: left;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    
+}
+
+.pages {
+    background: #d62828;
+    padding: 20px 10px;
+    text-align: left;
+    color: white;
+    font-family: 'Courier New', monospace;
+    margin: 15px;
+    font-size: 22px;
+}
+
+#opinion:focus {
+    outline: 3px solid #663399; 
+    background-color: #f9f9f9; 
+    border: 4px solid #d62828;  
+    box-shadow: 0 0 10px;
+}

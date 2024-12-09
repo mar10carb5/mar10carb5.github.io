@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Project 2
+    The Fall of the Roman Republic
+    Author: Mario Carbajal
+    Date:   12/06/2024
+    Filename: The Fall of the Roman Republic.html
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fall of the Roman Republic</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<div class="topnav">
+	<a class="active" href="index.html">Home</a>
+        <a href="SPQR.html">S.P.Q.R</a>
+        <a href="The First Triumvirate.html">The First Triumvirate</a>
+        <a href="characters.html">Julius Caesar</a>
+        <a href="final.html">Princeps</a>
+        <a href="Emperators.html">Emperators</a>
+        <a href="about.html">About</a>        
+        <a href="forums.html">Questioner</a>
+    </div>   
+    <header>
+        <h1>The Fall of the Roman Republic</h1>
+        <p><a><img src="romepic.png" alt="rome" width="900" height="385"> </a></p>
+        <p><strong>Regis tyrannis, nobilitatis oligarchia, populi vis</strong></p>
+        <p>“For kingship it is tyranny, for aristocracy it is oligarchy,</p>
+        <p>and for democracy it is government by brute force.”</p>
+        <p><strong>-Polybius</strong></p></header><br>
+         
+
+
+</head>
+
+<div class="grid-container">Time Since the Fall of the Roman Republic<div id="counter">Loading...
+
+<script>
+    // Date of the fall of the Roman Republic (approx. 27 BCE to 14 CE for the start of the Roman Empire)
+    const fallOfRomanRepublic = new Date(-27, 0, 1); // Approximate date, 1st January 27 BCE
+
+    // Time difference
+    function calculateTimeSinceFall() {
+        const currentDate = new Date();
+        const timeDifference = currentDate - fallOfRomanRepublic;
+
+        // Calculate time components
+        const millisecondsInOneDay = 1000 * 60 * 60 * 24;
+        const totalDays = Math.floor(timeDifference / millisecondsInOneDay);
+        const years = Math.floor(totalDays / 365.25); // Average year length (including leap years)
+        const months = Math.floor((totalDays % 365.25) / 30); // Approximate months
+        const days = totalDays % 30; // Approximate remaining days
+
+        // Update the counter display
+        const counterText = `${years} years, ${months} months, and ${days} days`;
+        document.getElementById('counter').textContent = counterText;
+    }
+
+    // Update every second
+    calculateTimeSinceFall();
+    setInterval(calculateTimeSinceFall, 1000);
+</script>
+</div>
+    
+    <footer>
+        <p>&copy; 2024 MC designs</p>
+    </footer>
+
+</body>
+</html>
